@@ -26,9 +26,9 @@ print("Kwota za szambo: " + szambo + " " + waluta)
 print("Kwota za drewno: " + drewno + " " + waluta)
 print("Kwota za przedszkole dzieka_1: " + przedkole_dziecka_1 + " " + waluta)
 print("Kwota za przedszkole dziecka_2: " + przedszkole_dziecka_2 + " " + waluta)
-print(lista_oplat)
-print(dochody_razem)
-print(roznica)
+print("Opłaty razem: ", lista_oplat, waluta)
+print("Nasze dochody: ", dochody_razem, waluta)
+print("Zostanie: ", roznica, waluta)
 
 def oplaty():
     if roznica > 0:
@@ -40,13 +40,13 @@ oplaty()
 koszty_dojazdu_na_dzien = input("Podaj koszt paliwa na dzień: ")
 ilosc_dni = input("Wpisz ilosc dni z dojazdem: ")
 koszty_paliwa = int(koszty_dojazdu_na_dzien) * int(ilosc_dni)
-print(koszty_paliwa)
+print("Miesięczne koszty paliwa: ", koszty_paliwa, waluta)
 
 koszty_wyzywienia_z_paragonów = input("Podaj kwoty z paragonów za zakupy: ")
 koszty_leków = input("Podaj koszty leków: ")
 
 kolejne_koszta = int(koszty_paliwa) + int(koszty_wyzywienia_z_paragonów) + int(koszty_leków)
-print(kolejne_koszta)
+print("Kolejne koszta:", kolejne_koszta, waluta)
 
 def podsumowanie():
     if kolejne_koszta < roznica:
@@ -54,3 +54,8 @@ def podsumowanie():
     else:
         print("Houston, mamy problem....")
 podsumowanie()
+
+
+reszta = roznica - kolejne_koszta
+print("Zostanie jeszcze: ", reszta, waluta)
+
