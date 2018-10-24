@@ -6,6 +6,7 @@ def lista_uslug():
         lista_uslug.append(x)
     return lista_uslug
 
+
 def input_type(lista_uslug):
     wynik = 0
     waluta = 'PLN'
@@ -27,16 +28,21 @@ def lista_przychody():
     return lista_przychody
 
 def input_type(lista_przychody):
-    wynik = 0
+    wynik2 = 0
     waluta = 'PLN'
     lista_output = []
     for pensja in lista_przychody:
         x = input('Podaj kwotę przychodu {}:'.format(pensja))
         lista_output.append(x)
     for i in lista_output:
-        wynik = wynik + int(i)
-    print ("Przychody razem: ", wynik, waluta)
+        wynik2 = wynik2 + int(i)
+    print ("Przychody razem: ", wynik2, waluta)
+    def zestawienie():
+        if wynik2 < 6200:
+            print('Powinno starczyc.')
+        else:
+            print('Raczej nie starczy.')
+    zestawienie()
+
 input_type(lista_przychody())
-
-
 

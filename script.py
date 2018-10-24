@@ -15,21 +15,6 @@ zarobki_zony = input("Podaj zarobki zony: ")
 dochody_razem = int(zarobki_meza) + int(zarobki_zony)
 roznica = dochody_razem - lista_oplat
 
-print("Lista Twoich opłat w tym miesiącu: ")
-print("Kwota najmu to: " + najem + " " + waluta)
-print("Kwota za internet i telefon: " + telefon_inernet + " " + waluta)
-print("Kwota za TV: " + tv + " " + waluta)
-print("Kwota za prąd: " + prad + " " + waluta)
-print("Kwota za wodę: " + woda + " " + waluta)
-print("Kwota za śmieci: " + smieci + " " + waluta)
-print("Kwota za szambo: " + szambo + " " + waluta)
-print("Kwota za drewno: " + drewno + " " + waluta)
-print("Kwota za przedszkole dzieka_1: " + przedkole_dziecka_1 + " " + waluta)
-print("Kwota za przedszkole dziecka_2: " + przedszkole_dziecka_2 + " " + waluta)
-print("Opłaty razem: ", lista_oplat, waluta)
-print("Nasze dochody: ", dochody_razem, waluta)
-print("Zostanie: ", roznica, waluta)
-
 def oplaty():
     if roznica > 0:
         print("Starczy!")
