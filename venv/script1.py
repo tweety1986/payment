@@ -16,6 +16,7 @@ def input_type(lista_uslug):
         lista_output.append(x)
     for i in lista_output:
         wynik = wynik + int(i)
+        return wynik
     print ("Opłaty razem: ", wynik, waluta)
 input_type(lista_uslug())
 
@@ -36,13 +37,14 @@ def input_type(lista_przychody):
         lista_output.append(x)
     for i in lista_output:
         wynik2 = wynik2 + int(i)
+        return wynik2
     print ("Przychody razem: ", wynik2, waluta)
     def zestawienie():
         if wynik2 < 6200:
             print('Powinno starczyc.')
         else:
             print('Raczej nie starczy.')
-    zestawienie()
 
 input_type(lista_przychody())
+
 
