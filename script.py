@@ -1,46 +1,20 @@
-waluta = "pln"
-najem = input("Podaj kwotę najmu: ")
-telefon_inernet = input("Podaj kwotę telefonu i internetu: ")
-tv = input("Podaj kwotę za TV: ")
-prad = input("Podaj kwotę za prąd: ")
-woda = input("Podaj kwotę za wodę: ")
-smieci = input("Podaj kwotę za smieci: ")
-szambo = input("Podaj kwotę za szambo: ")
-drewno = input("Podaj kwotę za drewno: ")
-przedkole_dziecka_1 = input("Podaj kwotę za przedszkole dziecka_1: ")
-przedszkole_dziecka_2 = input("Podaj kwotę za przedszkole dziecka_2: ")
-lista_oplat = int(najem) + int(telefon_inernet) + int(tv) + int(prad) + int(woda) + int(smieci) + int(szambo) + int(drewno) + int(przedkole_dziecka_1) + int(przedszkole_dziecka_2)
-zarobki_meza = input("Podaj zarobki meza: ")
-zarobki_zony = input("Podaj zarobki zony: ")
-dochody_razem = int(zarobki_meza) + int(zarobki_zony)
-roznica = dochody_razem - lista_oplat
-
-def oplaty():
-    if roznica > 0:
-        print("Starczy!")
-    else:
-        print("Nie starczy!")
-oplaty()
-
-koszty_dojazdu_na_dzien = input("Podaj koszt paliwa na dzień: ")
-ilosc_dni = input("Wpisz ilosc dni z dojazdem: ")
-koszty_paliwa = int(koszty_dojazdu_na_dzien) * int(ilosc_dni)
-print("Miesięczne koszty paliwa: ", koszty_paliwa, waluta)
-
-koszty_wyzywienia_z_paragonów = input("Podaj kwoty z paragonów za zakupy: ")
-koszty_leków = input("Podaj koszty leków: ")
-
-kolejne_koszta = int(koszty_paliwa) + int(koszty_wyzywienia_z_paragonów) + int(koszty_leków)
-print("Kolejne koszta:", kolejne_koszta, waluta)
-
-def podsumowanie():
-    if kolejne_koszta < roznica:
-        print("Tez starczy!")
-    else:
-        print("Houston, mamy problem....")
-podsumowanie()
+def lista_platnosci():
+    lista_platnosci = []
+    while True:
+        platnosc = input('Płatność za: ')
+        lista_platnosci.append(platnosc)
+        if platnosc == 'stop':
+            break
+        print(lista_platnosci)
+lista_platnosci()
 
 
-reszta = roznica - kolejne_koszta
-print("Zostanie jeszcze: ", reszta, waluta)
+
+
+
+
+
+
+
+
 
